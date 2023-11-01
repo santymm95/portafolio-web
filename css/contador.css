@@ -1,0 +1,22 @@
+
+
+.color_fondo{
+    height: 0px;
+    width: 100%;
+    background-color: #00ff51;
+    position: initial;
+}
+
+ .numero{
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    font-weight: bold;
+    color: gray;
+    background-color: white;
+    mix-blend-mode: screen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    }
