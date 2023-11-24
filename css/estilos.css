@@ -9,22 +9,22 @@
 
 header {
     width: 100%;
-    height: 500px;
+    height: 600px;
     background:#149eca;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #149eca, #149eca), url(../img/lf30_editor_w0jg1xwg.gif);
+    background: -webkit-linear-gradient(to right, #149eca, #149eca), url(../img/Fondo/video_home.gif);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #149cca87, hsla(0, 0%, 100%, 0.459), #149cca87), url(../img/lf30_editor_w0jg1xwg.gif);
+    background: linear-gradient(to right, #149cca87, hsla(0, 0%, 100%, 0.459), #149cca87), url(../img/Fondo/video_home.gif);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: contain;
-   
-    background-position: center;
-    position: relative;
+    background-size: cover;
+    background-position:center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 
 }
+
+
 
 body  {
     font-family: 'open sans';
@@ -33,7 +33,94 @@ body  {
 }
 
  
+.enlaces-menu {
+    list-style: none;
+    display: flex;
+}
+
+.enlaces-menu li {
+    margin: 0 15px;
+}
+
+.textos-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+button#mostrarTextos {
+    position: absolute;
+      bottom:20%;
+      
+}
+
+h1, h2 {
+    margin: 0;
+    opacity: 0;
+    margin-top: 50px;
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+   
+}
+
+h2 {
+    margin: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+   
+}
+
+
+.mostrado {
+    opacity: 1;
+    transform: translateY(0);
+}
  
+/* Agrega estos estilos a tu archivo styles.css */
+
+button#mostrarTextos {
+     
+     padding: 10px 20px;
+     background-image: linear-gradient(120deg, #89f6fe7a 0%,#149cca97 100%);
+    color: #6d6d6d;
+    border: none;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-btn {
+    position: relative;
+    background-color:#149cca97;
+    color: white;
+    border: none;
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: filter 0.5s ease; /* Transición para el efecto de brillo */
+  }
+
+  /* Clase adicional para activar el efecto de brillo */
+  .brillo-activo {
+    filter: brightness(4.0); /* Ajusta el valor según la intensidad del brillo */
+    transform: scale(1.30);
+    transition: 1s ease-in-out;
+
+}
+
+button#mostrarTextos:hover {
+    background-image: linear-gradient(120deg,#149cca97 0%,#89f6fe7a 100%);
+    transition:1s ease-in-out;
+}
+
  body .dark .about-services{
     background-color: #111111;
  }
@@ -61,7 +148,7 @@ header nav{
 
 
 
-.titulo {
+.titulo, h1 {
     color:#149eca;
     font-size: 30px;
     text-align: center;
@@ -184,32 +271,11 @@ header .textos-header{
 
  
 
-.textos-header h2:hover{
-    cursor: pointer;
-    -webkit-text-stroke: 2px rgb(38, 38, 38);
-    transition:0.5s all ease-in;
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-     
-
-
-}
+ 
 
 
 
-.textos-header h1:hover{
-    cursor: pointer;
-    -webkit-text-stroke: 2px rgb(38, 38, 38);
-    transition:0.5s ease-in;
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
+ 
 
 .textos-header h2{
     font-size: 30px;
@@ -272,7 +338,7 @@ main .sobre-nosotros{
 .contenido-textos p{
     padding: 0px 0px 30px 15px;
     font-weight: 300;
-    text-align: justify;
+   text-align: justify;
 }
 
 /* Galeria */
@@ -281,12 +347,24 @@ main .sobre-nosotros{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+.galeria-port img{
+  
+    border-radius: 5px;
+}
+
+div .galeria-port{
+  
+    border-radius: 5px;
 }
 
 .imagen-port{
     width: 24%;
     margin-bottom: 10px;
     overflow: hidden;
+    border-radius: 5px;
     position: relative;
     cursor: pointer;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
@@ -297,6 +375,7 @@ main .sobre-nosotros{
     height: 100%;
     object-fit: cover;
     display: block;
+    
 }
 
 .hover-galeria{
@@ -304,6 +383,7 @@ main .sobre-nosotros{
     width: 100%;
     height: 100%;
     top: 0;
+    border-radius: 5px;
     transform: scale(0);
     background:#149cca8a;
     transition:.5s;
@@ -327,6 +407,9 @@ main .sobre-nosotros{
 
 .imagen-port:hover .hover-galeria{
     transform: scale(1);
+    border: 5px solid #149cca8a;
+    box-shadow: 3px 5px 8px black;
+;
 }
 
 #portafolio{
@@ -648,7 +731,10 @@ footer{
           transition: 0.2s  0.1s; 
   
       }
-   
+      
+      .pdf-btn{
+        display: none;
+      }
       
       nav{
           flex-direction:column;

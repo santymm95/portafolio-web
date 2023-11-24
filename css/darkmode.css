@@ -1,30 +1,27 @@
+/* DarkMode */
 
-/* DarkMode*/ 
-
-.suiche{
-  
-	background-color: #343D5B;
-	border-radius: 1000PX;
-	border: none;
-	position: relative;
-	cursor: pointer;
-	display: flex;
-	outline: none;
+/* Estilos del interruptor del modo oscuro */
+.suiche {
+    background-color: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
     color: white;
 }
 
-span{
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  display: block;
-  background: none;
-  color: #fff;
+span {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    background: none;
+    color: #fff;
 }
 
- 
-
-.suiche::after{
+.suiche::after {
     content: "";
     display: block;
     width: 20px;
@@ -36,187 +33,87 @@ span{
     right: unset;
     border-radius: 100px;
     transition: .3s ease all;
-    box-shadow:  0px 0px 0px 1px rgba(0, 0, 0, .5);
- 
-    
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .5);
 }
 
-
- 
-
-.suiche.active{
-  background-color: orange;
-  color: #111111;
+.suiche.active {
+    background-color: orange;
+    color: #111111;
 }
 
-.active::after{
-  right: 0;
-  left: unset;
-
+.active::after {
+    right: 0;
+    left: unset;
 }
 
-body.dark{
+/* Estilos del cuerpo en modo oscuro */
+body.dark {
     background-color: #2e2e2e;
     transition: 1s ease all;
     color: white;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
 }
 
- 
-
-body.dark {
+body.dark,
+body.dark section,
+body.dark #portafolio,
+body.dark .about-services,
+body.dark #study,
+body.dark .card,
+body.dark header {
     background-color: #111111;
     color: white;
     transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
 }
-
-
- 
-
-body.dark section {
-    background-color: #111111;
-   
-    color: white;
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
-}
-
- 
-body.dark  .textos-header{
-  
-    
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #149eca, #149eca), url(../img/lf30_editor_w0jg1xwg.gif);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#55555575 , #333333eb, #a5a5a575), url(../img/lf30_editor_w0jg1xwg.gif);
-    background: linear-gradient(to right, #333333eb , #9f9f9f73,  #333333eb), url(../img/lf30_editor_w0jg1xwg.gif);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-    background-size: cover;
-   
-    background-position:center;
-     
-    background-repeat: no-repeat;
-    
-    color: white;
-    
-}
-
-
 
 body.dark nav {
     background-color: #25252578;
     color: rgb(255, 255, 255);
-    border-bottom:  solid white 1px;
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
+    border-bottom: solid white 1px;
 }
 
 body.dark footer {
     border-top: 1px solid white;
-     /* fallback for old browsers */
-     background: -webkit-linear-gradient(to right, #149eca, #149eca);
-     /* Chrome 10-25, Safari 5.1-6 */
-     background: linear-gradient(to right, #333333eb, #a5a5a575, #333333eb);
-     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
+    background: linear-gradient(to right, #333333eb, #a5a5a575, #333333eb);
 }
 
-body.dark footer h4 {
-     color: white;
-}
-
-body.dark footer p {
+body.dark footer h4,
+body.dark footer p,
+body.dark .card p {
     color: white;
 }
 
+body.dark h1 {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
 
+/* Estilos específicos para secciones en modo oscuro */
 body.dark #portafolio {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-    background-color: #111111;
-    color: white;
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
 }
 
-.about-services{
-    border-top: 1px solid white;
-}
-
-
-
-
- 
-
-body.dark #study {
-    border-top: 1px solid white;
-    background-color: #111111;
-    color: white;
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
-}
-
+body.dark #study,
 body.dark .card {
-    box-shadow: 0px 5px 5px white;
     border-top: 1px solid white;
-    background-color: #111111;
-    color: white;
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
-}
-body.dark h1{
-    -webkit-text-stroke: 2px white;
-    color: transparent; 
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
 }
 
+/* Estilos específicos para el encabezado en modo oscuro */
+body.dark .textos-header {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to right, #55555575, #333333eb, #a5a5a575),
+                url(../img/Fondo/chill_-lofi-u0026-synth-para-programar_-estudiar-y-montar-tu-p-_online-video-cutter.com_.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
  
 
-body.dark .card p {
-    color: white;
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    -moz-transition: 1s ease all;
-    -ms-transition: 1s ease all;
-    -o-transition: 1s ease all;
-}
-
+/* Estilos específicos para el encabezado en modo oscuro */
 body.dark header {
-     height: 430px;
- 
-
-     
+    height: 430px;
 }
+
+
 

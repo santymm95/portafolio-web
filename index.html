@@ -21,68 +21,171 @@
 <body>
     <div class="loader"></div>
     <header>
-
         <nav>
-
             <button class="suiche" id="suiche">
-                <span><i class="fa fa-sun" aria-hidden="true"></i>
-                </span>
-
+                <span><i class="fa fa-sun" aria-hidden="true"></i></span>
                 <span><i class="fa fa-moon-o" aria-hidden="true"></i></span>
             </button>
-
             <ul class="enlaces-menu">
-
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre mí</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
                 <li><a href="#tecnologias">Tecnologías</a></li>
                 <li><a href="#study">Estudios</a></li>
-                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#sobre">Sobre mí</a></li>
                 <li><a href="#referencias">Referencias</a></li>
                 <li><a class="contacto" href="#contacto">Contacto</a></li>
+                <button id="verPdfModalBtn" class="pdf-btn">HV</button>
 
+<!-- Modal para mostrar el PDF -->
+<div id="modalPdf" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" id="cerrarModalPdf">&times;</span>
+    <iframe id="pdfViewerModal" src="" frameborder="0"></iframe>
+  </div>
+</div>
             </ul>
-
             <button class="ham" type="button">
                 <span class="br-1"></span>
                 <span class="br-2"></span>
                 <span class="br-3"></span>
             </button>
         </nav>
-
         <section id="inicio" class="textos-header">
-            <h1>Santiago Montoya Marín</h1>
-            <h2>Developer fontend</h2>
+            <button id="mostrarTextos">Quien soy?</button>
+            <!-- Agrega este botón debajo del botón "Quien soy?" -->
+
+
+
+            <h1 id="titulo" class="oculto">Santiago Montoya Marín</h1>
+            <h2 id="subtitulo" class="oculto">Developer fontend</h2>
         </section>
     </header>
     <main>
-        <section id="sobre" class="contenedor sobre-nosotros">
-            <h2 class="titulo">Algo sobre mi</h2>
-            <div class="contenedor-sobre-nosotros">
-                <img id="" src="img/code-development-flatline.svg" alt="" class="imagen-about-us">
-                <div class="contenido-textos">
-                    <h3><span>1</span>Formación profesional</h3>
-                    <p>En desarrollo web y sistemas informaticos, con conocimiento en
-                        programación HTML, CSS, JavaScript, Mongo DB direccionamiento IP y sistemas operativos.</p>
-                    <h3><span>2</span>Descripción personal.</h3>
-                    <p>Persona creativa, autodidacta, con iniciativa para
-                        asumir retos. Con habilidades para lograr
-                        objetivos planteados, excelentes relaciones
-                        interpersonales y trabajo en equipo.</p>
+        <section class="portafolio" id="portafolio">
+            <div class="contenedor">
+                <h3 id="titulo" class="titulo">Portafolio</h3>
+                <div class="galeria-port">
+                    <!-- Imagen 1 con botón -->
+                    
+                    <div  data-aos="fade-right" class="imagen-port">
+                        <img src="./img/Portafolio/Restaurant.jpg" alt="">
+                        <div class="hover-galeria">
+                            <button class="modal-btn"
+                                data-video="./videos/formulario - Google Chrome 2023-11-04 08-45-26.mp4">Ver
+                                video</button>
+                            <a class="git-btn" href="https://github.com/santymm95/ecommerce-restaurant.git"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-down" class="imagen-port">
+                        <img src="./img/Portafolio/pos-ventas.jpg" alt="">
+                        <div class="hover-galeria">
+                            <button class="modal-btn"
+                                data-video="./videos/Buscador de Dispositivos - Google Chrome 2023-11-09 15-51-35.mp4">Ver
+                                video</button>
+                            <a class="git-btn" href="https://github.com/santymm95/carrito-de-compras.git"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-down" class="imagen-port">
+                        <img src="./img/Portafolio/Projecto pragma.JPG" alt="">
+                        <div class="hover-galeria">
+                            <button class="modal-btn"
+                                data-video="./videos/Julius - Google Chrome 2023-11-08 10-04-25.mp4">Ver
+                                video</button>
+                            <a class="git-btn" href="https://github.com/santymm95/proyecto-julius.git"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" class="imagen-port">
+                        <img src="./img/Portafolio/portafolio web.jpg" alt="">
+                        <div class="hover-galeria">
+                            <button class="modal-btn" data-video="./videos/pagina-web_NPx23cmB.mp4">Ver
+                                video</button>
+                            <a class="git-btn" href="https://github.com/santymm95/portafolio-web"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- Otras imágenes aquí -->
                 </div>
+                <div class="galeria-port">
+                    <!-- Imagen 1 con botón -->
+
+                    <div data-aos="fade-right" class="imagen-port">
+                        <img src="./img/Portafolio/nav-youtube.jpg" alt="">
+                        <div class="hover-galeria">
+                            <button class="modal-btn"
+                                data-video="./videos/Navegación - Google Chrome 2023-11-04 08-30-41.mp4">Ver
+                                video</button>
+                            <a class="git-btn" href="https://github.com/santymm95/nav-youtube.git"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+
+                    <div class="imagen-port" data-aos="fade-up">
+                        <img src="./img/Portafolio/calculadora.JPG" alt="">
+                        <div class="hover-galeria">
+                            <button class="modal-btn"
+                                data-video="./videos/Calculadora - Google Chrome 2023-11-01 15-14-20.mp4">Ver
+                                video</button>
+                            <a class="git-btn" href="https://github.com/santymm95/calculadora.git"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    
+
+
+
+
+                    <div data-aos="fade-up" class="imagen-port">
+                        <img src="./img/Portafolio/moto.jpg" alt="">
+                        <div class="hover-galeria">
+                            <button class="modal-btn" data-video="./videos/ecommerce.mp4">Ver video</button>
+                            <a class="git-btn" href="https://github.com/santymm95/ecommerce-basic.git"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" class="imagen-port">
+                        <img src="./img/Portafolio/Paralax.JPG" alt="">
+                        <div class="hover-galeria">
+                            <button class="modal-btn" data-video="./videos/Paralax.mp4">Ver video</button>
+                            <a class="git-btn" href="https://github.com/santymm95/ecommerce-basic.git"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+
+                    <!-- Otras imágenes aquí -->
+                </div>
+
+
+                <!-- Otras imágenes aquí -->
+            </div>
+
             </div>
         </section>
+
         <section class="about-services">
             <div class="contenedor">
-                <h2 id="tecnologias" class="titulo">
-                    Tecnologías</h2>
+                <h3 id="tecnologias" class="titulo">
+                    Tecnologías</h3>
                 <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
                     <div class="card d-flex position-relative flex-column">
                         <div class='imgContainer'>
                             <img src='./img/lenguajes/1html.jpg'>
                         </div>
                         <div class="content">
-                            <h2>HTML</h2>
+                            <h3>HTML</h3>
                             <p>Manejo avanzado de lenguaje de marcado de hipertexto, redacción clara y contextualizada.
                                 Manejo estricto de la semántica y código limpio.</p>
                         </div>
@@ -92,7 +195,7 @@
                             <img src='./img/lenguajes/1css.jpg'>
                         </div>
                         <div class="content">
-                            <h2>CSS</h2>
+                            <h3>CSS</h3>
                             <p>Conocimiento intermedio de estilos en cascada, manejo responsive y adaptativo. Bootstrap
                                 5, flex-box y grid.</p>
                         </div>
@@ -102,7 +205,7 @@
                             <img src='./img/lenguajes/1js.jpg'>
                         </div>
                         <div class="content">
-                            <h2>JAVASCRIPT</h2>
+                            <h3>JAVASCRIPT</h3>
                             <p>Gestión de variables y alertas, etiquetas de movimiento y dinamismo en páginas web.
                                 Gestión del marco y React básico.</p>
                         </div>
@@ -112,8 +215,8 @@
                             <img src='./img/lenguajes/MongoDB-1329545826074381322.png'>
                         </div>
                         <div class="content">
-                            <h2>MONGO DB</h2>
-                            <p>Integración de variables, actualización de datos, asignación de comandos y para la
+                            <h3>MONGO DB</h3>
+                            <p>Integración de variables, actualización de datos, asignación de comandos y
                                 búsqueda de información. Aun en constante aprendizaje</p>
                         </div>
                     </div>
@@ -122,7 +225,7 @@
                             <img src='./img/lenguajes/1bst.jpg'>
                         </div>
                         <div class="content">
-                            <h2>BOOTSTRAP 05</h2>
+                            <h3>BOOTSTRAP 05</h3>
                             <p>Conceptos básicos de la librería, edición, maquetación y personalización del código de
                                 los diferentes componentes.</p>
                         </div>
@@ -132,17 +235,51 @@
                             <img src='./img/lenguajes/re.png'>
                         </div>
                         <div class="content">
-                            <h2>REACT</h2>
+                            <h3>REACT</h3>
                             <p>Interpretación de la libreria para el desplegue de codigo limpio,creando y ejecutando
                                 proyectos básicos. Aun en constante aprendizaje</p>
                         </div>
+
+                    </div>
+                    <div class="card d-flex position-relative flex-column">
+                        <div class='imgContainer'>
+                            <img src='./img/lenguajes/wordpress.jpg'>
+                        </div>
+                        <div class="content">
+                            <h3>WORDPRESS</h3>
+                            <p>Crear temas y complementos personalizados, publicar contenido y diseñar interfaces
+                                intuitivas, publicar y gestionar sitios web.</p>
+                        </div>
+
+                    </div>
+                    <div class="card d-flex position-relative flex-column">
+                        <div class='imgContainer'>
+                            <img src='./img/lenguajes/photo.jpg'>
+                        </div>
+                        <div class="content">
+                            <h3>PHOTOSHOP</h3>
+                            <p>Creación y edición de imágenes con diferentes herramientas. Ajustes de color, recortes, capas, texto y herramientas de pincel,
+                                manipulación y mejoras de imagen.</p>
+                        </div>
+
+                    </div>
+                    <div class="card d-flex position-relative flex-column">
+                        <div class='imgContainer'>
+                            <img src='./img/lenguajes/canva.jpg'>
+                        </div>
+                        <div class="content">
+                            <h3>CANVA</h3>
+                            <p>
+                                Creación de presentaciones, publicaciones de redes sociales, tarjetas y más. Diseño de plantillas, herramientas de texto, imágenes y elementos gráficos.</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
         <section id="study" class="about-services">
             <div class="contenedor">
-                <h2 class="titulo">Estudios</h2>
+                <h3 class="titulo">Estudios</h3>
                 <div class="servicio-cont">
                     <div class="servicio-ind">
                         <img src="./img/Estudios/desarrollo.gif" alt="">
@@ -170,85 +307,31 @@
                 </div>
             </div>
         </section>
-
-
-        <section class="portafolio" id="portafolio">
-            <div class="contenedor">
-                <h2 class="titulo">Portafolio</h2>
-                <div class="galeria-port">
-                    <!-- Imagen 1 con botón -->
-                    <div data-aos="fade-down-left" class="imagen-port">
-                        <img src="./img/Portafolio/img1.jpg" alt="">
-                        <div class="hover-galeria">
-                            <button class="modal-btn"
-                                data-video="./videos/Opener de innovación de Inteligencia Artificial Preview 79848573 _ Renderforest - Google Chrome 2023-10-25 10-27-29.mp4">Ver
-                                video</button>
-                            <button class="git-btn" onclick="location.href='https://github.com/santymm95/portafolio-web'">GitHub</button>
-
-                        </div>
-                    </div>
-                    <div data-aos="fade-down-left" class="imagen-port">
-                        <img src="./img/Portafolio/calculadora.JPG" alt="">
-                        <div class="hover-galeria">
-                            <button class="modal-btn"
-                                data-video="./videos/Calculadora - Google Chrome 2023-11-01 15-14-20.mp4">Ver
-                                video</button>
-                            <button class="git-btn" onclick="location.href='https://www.Google.com'">GitHub</button>
-                        </div>
-                    </div>
-                    <div data-aos="fade-down-left" class="imagen-port">
-                        <img src="./img/Portafolio/img1.jpg" alt="">
-                        <div class="hover-galeria">
-                            <button class="modal-btn"
-                                data-video="./videos/Opener de innovación de Inteligencia Artificial Preview 79848573 _ Renderforest - Google Chrome 2023-10-25 10-27-29.mp4">Ver
-                                video</button>
-                            <button class="git-btn" onclick="location.href='https://www.Google.com'">GitHub</button>
-                        </div>
-                    </div>
-
-
-                    <!-- Otras imágenes aquí -->
+        <section id="sobre" class="contenedor sobre-nosotros">
+            <h3 class="titulo">Algo sobre mi</h3>
+            <div class="contenedor-sobre-nosotros">
+                <img id="" src="img/code-development-flatline.svg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Formación profesional</h3>
+                    <p>Con 2 años de experiencia
+                        en desarrollo web; conocimiento sólidos en
+                        HTML, CSS, JavaScript, bootstrap, CMS,
+                        repositorios, software de control de
+                        versiones, Git, Github, Photoshop, Autocad y
+                        React.js.</p>
+                    <h3><span>2</span>Descripción personal.</h3>
+                    <p>Con iniciativa para asumir retos y lograr
+                        objetivos planteados, excelentes
+                        relaciones interpersonales, creativo,
+                        autodidacta, dispuesto a aprender y a
+                        desaprender, enfocado al 110% en mi
+                        pasión por la programación y los sistemas
+                        informáticos.</p>
                 </div>
-                <div class="galeria-port">
-                    <!-- Imagen 1 con botón -->
-                    <div data-aos="fade-down-left" class="imagen-port">
-                        <img src="./img/Portafolio/img1.jpg" alt="">
-                        <div class="hover-galeria">
-                            <button class="modal-btn"
-                                data-video="./videos/Opener de innovación de Inteligencia Artificial Preview 79848573 _ Renderforest - Google Chrome 2023-10-25 10-27-29.mp4">Ver
-                                video</button>
-                            <button class="git-btn" onclick="location.href='https://www.Google.com'">GitHub</button>
-                        </div>
-                    </div>
-                    <div data-aos="fade-down-left" class="imagen-port">
-                        <img src="./img/Portafolio/img1.jpg" alt="">
-                        <div class="hover-galeria">
-                            <button class="modal-btn"
-                                data-video="./videos/Opener de innovación de Inteligencia Artificial Preview 79848573 _ Renderforest - Google Chrome 2023-10-25 10-27-29.mp4">Ver
-                                video</button>
-                            <button class="git-btn" onclick="location.href='https://www.Google.com'">GitHub</button>
-                        </div>
-                    </div>
-                    <div data-aos="fade-down-left" class="imagen-port">
-                        <img src="./img/Portafolio/img1.jpg" alt="">
-                        <div class="hover-galeria">
-                            <button class="modal-btn"
-                                data-video="./videos/Opener de innovación de Inteligencia Artificial Preview 79848573 _ Renderforest - Google Chrome 2023-10-25 10-27-29.mp4">Ver
-                                video</button>
-                            <button class="git-btn" onclick="location.href='https://www.Google.com'">GitHub</button>
-                        </div>
-                    </div>
-
-
-                    <!-- Otras imágenes aquí -->
-                </div>
-
-
-                <!-- Otras imágenes aquí -->
-            </div>
-
             </div>
         </section>
+
+
 
         <!-- Modal para el video -->
         <!-- Modal para el video -->
@@ -263,113 +346,124 @@
 
 
 
- 
 
-<section class="clientes contenedor " id="referencias">
-    <h2 class="titulo">Referencias personales</h2>
-    <div class="cards">
-        <div data-aos="fade-right" class="card">
-            <div class="contenido-texto-card">
-                <h4>Carlos Ariel - Ingeniero Comfama</h4>
-                <p>Realiza trabajos de calidad, cumpliendo con los estándares y lineamientos de trabajo
-                    asignados.</p>
+
+        <section class="clientes contenedor " id="referencias">
+            <h3 class="titulo">Referencias</h3>
+            <div class="cards">
+                <div data-aos="fade-right" class="card">
+                    <div class="contenido-texto-card">
+                        <h4>Carlos Ariel - Ingeniero Comfama</h4>
+                        <p>Realiza trabajos de calidad, cumpliendo con los estándares y lineamientos de trabajo
+                            asignados.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="card">
+                    <div class="contenido-texto-card">
+                        <h4>Neider Montoya - La Gustocita</h4>
+                        <p>Creó la página web de mi negocio, la cual ayudo a llegar a más clientes, aumentando mas las
+                            ventas.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="./img/Referencias/logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/1.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/2.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/5.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/1.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/2.png" alt="">
+                    </div>
+
+
+                    <div class="slide">
+                        <img src="./img/Referencias/2.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/5.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/1.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/2.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/logo.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./img/Referencias/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+    </main>
+
+    <footer>
+        <div class="botones">
+
+            <a href="https://api.whatsapp.com/send?phone=3136895352" class="btn-wsp" target="_blank">
+                <img class="what" src="./img/whatsapp (3).png" alt="">
+            </a>
+            
+         
+            
+        </div>
+
+        <!-- Botón para abrir el modal con el PDF -->
+
+
+
+        <div id="contacto" class="contenedor-footer">
+
+            <div class="content-foo">
+                <h4>Celular</h4>
+                <p>3136895352</p>
+            </div>
+            <div class="content-foo">
+                <h4>Correo</h4>
+                <p>santymm95@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicación</h4>
+                <p>Medellin, Colombia</p>
             </div>
         </div>
-        <div data-aos="fade-left" class="card">
-            <div class="contenido-texto-card">
-                <h4>Neider Montoya - La Gustocita</h4>
-                <p>Creó la página web de mi negocio, la cual ayudo a llegar a más clientes, aumentando mas las
-                    ventas.</p>
-            </div>
-        </div>
+        <h2 class="titulo-final">&copy; Santiago Montoya |© Derechos reservados</h2>
+    </footer>
 
-    </div>
-    <div class="slider">
-        <div class="slide-track">
-            <div class="slide">
-                <img src="./img/Referencias/logo.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/2.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/5.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/logo.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/2.png" alt="">
-            </div>
-
-
-            <div class="slide">
-                <img src="./img/Referencias/2.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/5.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/logo.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/2.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/logo.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./img/Referencias/1.png" alt="">
-            </div>
-        </div>
-    </div>
-</section>
-</main>
-
-<footer>
-    <a href="https://api.whatsapp.com/send?phone=3136895352" class="btn-wsp" target="_blank">
-        <img class="what" src="./img/whatsapp (3).png" alt="">
-    </a>
-
-    <div id="contacto" class="contenedor-footer">
-
-        <div class="content-foo">
-            <h4>Celular</h4>
-            <p>3136895352</p>
-        </div>
-        <div class="content-foo">
-            <h4>Correo</h4>
-            <p>santymm95@gmail.com</p>
-        </div>
-        <div class="content-foo">
-            <h4>Ubicación</h4>
-            <p>Medellin, Colombia</p>
-        </div>
-    </div>
-    <h2 class="titulo-final">&copy; Santiago Montoya |© Derechos reservados</h2>
-</footer>
-
-<script src="main.js"></script>
-<script src="modal.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-<script>
-    AOS.init({
-        duration: 1500,
-        once: true
-    }); 
-</script>
+    <script src="main.js"></script>
+    <script src="modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+            once: true
+        }); 
+    </script>
 </body>
 
 </html>

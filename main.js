@@ -1,6 +1,15 @@
 // Seleccionar el elemento con el ID "suiche" (botón para alternar el modo oscuro)
 const btn = document.querySelector('#suiche');
 
+// Obtener el estado actual del modo oscuro desde el almacenamiento local
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+// Aplicar el modo oscuro si estaba activado previamente
+if (isDarkMode) {
+    document.body.classList.add('dark');
+    btn.classList.add('active');
+}
+
 // Agregar un evento de clic al botón "suiche"
 btn.addEventListener('click', () => {
     // Alternar la clase "dark" en el elemento "body" para activar/desactivar el modo oscuro
@@ -8,7 +17,12 @@ btn.addEventListener('click', () => {
     
     // Alternar la clase "active" en el botón "suiche" para cambiar su apariencia
     btn.classList.toggle('active');
+
+    // Guardar el estado actual del modo oscuro en el almacenamiento local
+    const isDarkModeNow = document.body.classList.contains('dark');
+    localStorage.setItem('darkMode', isDarkModeNow.toString());
 });
+
 
 // Seleccionar elementos relacionados al menú de navegación tipo hamburguesa
 const ham = document.querySelector('.ham'); // El botón de hamburguesa
